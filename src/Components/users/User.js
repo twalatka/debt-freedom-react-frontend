@@ -8,7 +8,7 @@ export default class NewUser extends Component {
     }
    
    componentDidMount(){
-       fetch('http://localhost:5000/loans/').then(response =>response.json())
+       fetch('http://localhost:5000/users/').then(response =>response.json())
        .then(users => this.setState({users}))
        .catch(console.error);
    }

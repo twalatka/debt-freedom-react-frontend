@@ -8,7 +8,7 @@ export default class NewPayment extends Component {
     }
    
    componentDidMount(){
-       fetch('http://localhost:5000/loans/').then(response =>response.json())
+       fetch('http://localhost:5000/payments/').then(response =>response.json())
        .then(payments => this.setState({payments}))
        .catch(console.error);
    }

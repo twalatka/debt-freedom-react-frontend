@@ -5,9 +5,9 @@ import NewLoan from './Components/loans/NewLoan.js';
 import User from './Components/users/User.js';
 import Payment from './Components/payments/Payment.js'
 
-const loan = { loanNum: 'loan numnber', type: 'loan type', prin: 'principal balance', rate: 'interest rate', pmt: '5/15/17', date: 'payment date', mthsRem: 'how many months left to payoff', user: 'twalatka@yahoo.com'}
+const loan = { loanNum: 'loan number', type: 'loan type', prin: 'principal balance', rate: 'interest rate', pmt: '5/15/17', date: 'payment date', mthsRem: 'how many months left to payoff', user: 'twalatka@yahoo.com'}
 const payment = { };
-const user = {userName: 'user name', Email: 'email'};
+const user = { userName: 'user name', Email: 'email'};
 class App extends Component {
 
 
