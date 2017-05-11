@@ -1,15 +1,15 @@
 import React, {Component} from "react"; 
-import Loan from './LoanFormat';
+import User from './UserFormat';
 
-export default class NewLoan extends Component {
+export default class NewUser extends Component {
     constructor(props){
         super(props);
-        this.state = {loans: []};
+        this.state = {users: []};
     }
    
    componentDidMount(){
        fetch('http://localhost:5000/loans/').then(response =>response.json())
-       .then(loans => this.setState({loans}))
+       .then(users => this.setState({users}))
        .catch(console.error);
    }
 
@@ -17,7 +17,7 @@ export default class NewLoan extends Component {
         return(
             <div>
             <div>
-               {this.state.loans.map(loans => Loan(loans))}             
+               {this.state.users.map(users => User(users))}             
             </div>   
             </div>
       )

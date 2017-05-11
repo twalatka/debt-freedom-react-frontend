@@ -1,15 +1,15 @@
 import React, {Component} from "react"; 
-import Loan from './LoanFormat';
+import Payment from './PaymentFormat';
 
-export default class NewLoan extends Component {
+export default class NewPayment extends Component {
     constructor(props){
         super(props);
-        this.state = {loans: []};
+        this.state = {payments: []};
     }
    
    componentDidMount(){
        fetch('http://localhost:5000/loans/').then(response =>response.json())
-       .then(loans => this.setState({loans}))
+       .then(payments => this.setState({payments}))
        .catch(console.error);
    }
 
@@ -17,7 +17,7 @@ export default class NewLoan extends Component {
         return(
             <div>
             <div>
-               {this.state.loans.map(loans => Loan(loans))}             
+               {this.state.payments.map(payments => Payment(payments))}             
             </div>   
             </div>
       )
